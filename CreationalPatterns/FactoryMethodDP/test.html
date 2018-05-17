@@ -1,0 +1,17 @@
+<a class="btn btn-brown" href="javascript:void(0);" onclick="run();return false">Run</a>
+<script src="factoryMethodDP.js"></script>
+<script type="text/javascript">
+
+function run() {
+	
+	var factory = new DocumentFactory();
+	var doc = factory.CreateVersion("PDF");
+    console.log(doc.GetDocumentTitle());
+    console.log(doc.GetDocumentContent());
+
+	doc = factory.CreateVersion("DOCX");
+    console.log(doc.GetDocumentTitle());
+    console.log(doc.GetDocumentContent());
+}
+
+</script>

@@ -19,12 +19,3 @@ var Vodafone = (function () {
         }
     };
 })();
- 
-function run() {
- 
-		var line = Vodafone.GetInstance();
-        var name = line.GetName();
-        var number = line.GetNumber();
-
-        console.log("Name: " + name + ", number: " + number);
-}

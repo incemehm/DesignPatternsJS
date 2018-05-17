@@ -1,0 +1,31 @@
+<a class="btn btn-brown" href="javascript:void(0);" onclick="run();return false">Run</a>
+<script src="abstractFactoryDP.js"></script>
+<script type="text/javascript">
+
+function run() {
+	
+	var hardwareFactory = new HighPerformanceHardwareFactory();
+
+    var processor = hardwareFactory.ProcessorModel();
+    var ram = hardwareFactory.RAMModel();
+    var hdd = hardwareFactory.HDDModel();
+
+    processor.IntegrateProcessor();
+    ram.IntegrateRAM();
+    hdd.IntegrateHDD();
+
+    console.log("-----------------------");
+
+    hardwareFactory = new FairPriceHardwareFactory();
+
+    processor = hardwareFactory.ProcessorModel();
+    ram = hardwareFactory.RAMModel();
+    hdd = hardwareFactory.HDDModel();
+
+    processor.IntegrateProcessor();
+    ram.IntegrateRAM();
+    hdd.IntegrateHDD();
+	
+}
+
+</script>
